@@ -23,17 +23,16 @@ typedef enum
 // Color Methods
 + (UIColor *)colorFromHexString:(NSString *)hexString;
 + (UIColor *)colorWithRGBAArray:(NSArray *)rgbaArray;
++ (UIColor *)colorWithCMKY:(NSArray *)cmykValues;
 - (NSString *)hexString;
-- (NSArray *)rgbaArray;
+- (NSArray *)rgbaArray;//returns the rgba as percents
+- (NSArray *)rgbaValues;//returns rgba as actual rgb values
 - (NSArray *)hsbaArray;
 - (NSDictionary *)rgbaDict;
 - (NSDictionary *)hsbaDict;
 
 // Generate Color Scheme
 - (NSArray *)colorSchemeOfType:(ColorScheme)type;
-
-// Contrasting Color
-- (UIColor *)blackOrWhiteContrastingColor;
 
 // System Colors
 + (UIColor *)infoBlueColor;
